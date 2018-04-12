@@ -1,0 +1,23 @@
+body, html{
+    height:100%;
+}
+body{
+    padding:0;
+    margin:0;
+}
+.wrapper{
+    overflow:hidden;
+}  
+
+// Animations on #main & menu
+section#main, nav, label[for=main_menu] {
+  @include transition(all .2s cubic-bezier(.23,1,.32,1)); 
+} 
+
+#main {
+	padding: $main-top-padding $main-right-padding $main-bottom-padding $main-left-padding;
+}
+
+.logo {
+	margin:0;
+} 
