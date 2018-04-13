@@ -1,0 +1,25 @@
+// Button with ripple effect 
+button.primary {
+  border: none;
+  @include border-radius(.3em);
+  padding: .8em 1em;
+  cursor: pointer;
+  color: white;
+  background-color: $btn-primary-bg;
+  box-shadow: 0 2px 4px rgba(0,0,0,.22);
+  outline: none;
+  background-position: center;
+  @include transition(background .8s);
+
+
+  &:hover {
+  		background: lighten($btn-primary-bg, 10% ) radial-gradient(circle, transparent 1%, lighten($btn-primary-bg, 10% ) 1%) center/15000%;
+      box-shadow: none medium;
+	}
+
+	&:active {
+	  background-color: lighten($btn-primary-bg, 20% );
+	  background-size: 100%;
+    @include transition(background 0s); 
+	}
+}
