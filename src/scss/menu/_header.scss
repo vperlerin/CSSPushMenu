@@ -1,0 +1,34 @@
+// Header Components
+
+.logo {
+	color: $logo_color;
+	padding: $logo-top-padding $logo-right-padding $logo-bottom-padding $logo-left-padding;
+}	
+
+header, nav {
+	background-color:$header_bg;	
+} 
+
+header {
+	span.logo {
+		display: inline-block;
+	    width: 100%;
+	    text-align: center;
+	    padding-left: 0;
+	    padding-right: 0;
+ 	}
+}
+
+label[for=main_menu] {
+    display:block;
+    font-weight:700; 
+    text-align:center;
+    position:fixed; 
+    z-index:500; 
+    top:$burger_top;
+}
+
+input[name="main_menu"]{ 
+    display:none;
+}
+

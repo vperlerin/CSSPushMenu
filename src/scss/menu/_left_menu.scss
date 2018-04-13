@@ -1,0 +1,35 @@
+// MENU ON THE LEFT
+.left_menu {
+	input[name="main_menu"]:checked ~ section{
+	  @include transform(translate3d($menu-width, 0, 0));
+	}
+ 	 
+	input[name="main_menu"]:checked ~ label[for=main_menu] {
+		left:$menu-width - $hamburger-layer-width*2;
+		@include transition(left 0.2s cubic-bezier(0.23, 1, 0.32, 1));
+	}
+ 
+	@media(max-width:767px) {
+		nav li a {
+			left:-100%;         
+			@include transition(left 0.2s cubic-bezier(0.23, 1, 0.32, 1));
+		}
+		nav{
+		    left:0; 
+		    margin-left:-$menu-width - .8em; // .8em for the shadow
+		}
+
+		input[name="main_menu"]:checked ~ nav{
+		    li a { 
+		          left: 0;
+		    }
+	    }
+
+	    // X position on menu opened
+		input[name="main_menu"]  ~  label[for=main_menu] { 
+			left:$burger_dist_from_border;
+		}
+
+	}
+
+}

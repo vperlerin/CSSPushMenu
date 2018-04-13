@@ -11,7 +11,7 @@
 <body>
 <div class="wrapper">
 
-    <header>
+    <header class="right_menu">
         <input type="checkbox" id="main_menu" name="main_menu" />
         <span class="logo">Logo</span>
         <label for="main_menu">
@@ -50,6 +50,8 @@
     <section id="main">
             <article>
                 <h1>Pure CSS slide in push menu</h1>
+                <p>Javascript is only used for demo purpose</p>
+                <button id="switch_side">Switch Side</button>
                 <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                 </p>
@@ -60,5 +62,16 @@
         </section>
     </div>
 </div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script>
+    $(function() {
+        $('#switch_side').click(function() {
+             $("header").toggleClass("left_menu right_menu");
+        });
+    });
+</script>  
 </body>
 </html>
